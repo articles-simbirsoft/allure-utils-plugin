@@ -11,8 +11,10 @@ import java.util.UUID;
 public class PrepareHistoryMojo extends AbstractMojo {
     @Parameter(property = "allure-utils-plugin.results.directory", defaultValue = "target/allure-results")
     protected String resultsDirectory;
+
     @Parameter(property = "allure-utils-plugin.report.baseurl", defaultValue = "..")
     protected String baseUrl;
+
     @Parameter(property = "allure-utils-plugin.report.base-path", defaultValue = "${project.reporting.outputDirectory}/results")
     protected String outputDirectory;
 
@@ -41,7 +43,7 @@ public class PrepareHistoryMojo extends AbstractMojo {
 
     }
 
-    private String getUniqName() {
+    private static String getUniqName() {
         return UUID.randomUUID().toString();
     }
 }

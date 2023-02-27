@@ -24,4 +24,5 @@ public final class SimpleTest extends BaseTest {
                 .shouldBe(Condition.visible)
                 .shouldHave(Condition.text(MAIN_PAGE_HEADER));
     }
+
 }

@@ -14,12 +14,17 @@ public final class HistoryLinkUtils {
     private static final ObjectMapper MAPPER = new ObjectMapper();
 
     private static final String HISTORY_TREND_FILE_NAME = "history-trend.json";
+
     private static final String HISTORY_FILE_NAME = "history.json";
+
     private static final String CATEGORIES_TREND_FILE_NAME = "categories-trend.json";
+
     private static final String DURATION_TREND_FILE_NAME = "duration-trend.json";
+
     private static final String RETRY_TREND_FILE_NAME = "retry-trend.json";
 
-    public static String getAbsoluteUrlToIndexHtml(final String baseUrl, final String uniqName) {
+
+    private static String getAbsoluteUrlToIndexHtml(final String baseUrl, final String uniqName) {
         return baseUrl + "/" + uniqName + "/index.html";
     }
 
