@@ -13,12 +13,12 @@ public final class HistoryFilesUtils {
         return !lastReportDir.exists();
     }
 
-
     public static void moveHistoryToResults(final File lastReportDir, final File resultsDir) throws IOException {
-        if (new File(resultsDir, HISTORY_DIR_NAME).exists()) {
-            FileUtils.deleteDirectory(new File(resultsDir, HISTORY_DIR_NAME));
+        File historyDir = new File(resultsDir, HISTORY_DIR_NAME);
+        if (historyDir.exists()) {
+            FileUtils.deleteDirectory(historyDir);
         }
-        FileUtils.moveDirectory(new File(lastReportDir, HISTORY_DIR_NAME), new File(resultsDir, HISTORY_DIR_NAME));
+        FileUtils.moveDirectory(new File(lastReportDir, HISTORY_DIR_NAME), historyDir);
     }
 
     public static void moveLastReportToUniq(final File lastReportDir, final File uniqNameDir) throws IOException {

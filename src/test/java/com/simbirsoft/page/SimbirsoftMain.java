@@ -13,4 +13,5 @@ public final class SimbirsoftMain {
     public static SimbirsoftMain openPage(final String url){
         return open(url, SimbirsoftMain.class);
     }
+
 }
